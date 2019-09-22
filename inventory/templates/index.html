@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<! -- TITLE ------->
+<div class="container theme-showcase">
+    <div class="row d-flex justify-content-end">
+        <div class="mr-auto p-2">
+            <h2>Viewing Laptops</h2>
+        </div>
+
+        <div class="p-2">
+            <a class="btn btn-dark" href="{% url 'add_laptop' %}" role="button"> Add Laptop </a>
+        </div>
+    </div>
+</div>
+
+<! -- TABLE ------->
+<div class="table-responsive">
+    <table class="table table-hover">
+        <caption>There are currently {{ count }} laptops in the database.</caption>
+        <thead>
+            <tr>
+                <th scope="column">Office</th>
+                <th scope="column">Dept.</th>
+                <th scope="column">Username</th>
+                <th scope="column">Model</th>
+                <th scope="column">Service</th>
+                <th scope="column">Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in items %}
+                <tr onclick="window.location='{% url 'edit_laptop' item.pk %}';">
+                    <td>{{ item.office }}</td>
+                    <td>{{ item.dept }}</td>
+                    <td>{{ item.username }}</td>
+                    <td>{{ item.model }}</td>
+                    <td>{{ item.service_tag }}</td>
+                    <td>{{ item.status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

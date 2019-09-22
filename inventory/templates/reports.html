@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<! -- TITLE ------->
+<div class="px-3 py-3 pt -md-5 pb-md-4 mx-auto text-center">
+    <h2 class="display-4">Reports</h2>
+    <p class="lead">View laptop breakdown for all office locations.</p>
+</div>
+
+<! -- REPORT CARDS ------->
+<div class="row">
+
+    {% for report in reports %}
+
+    <div class="col-md-3">
+        <div class="card mb-3 box-shadow shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{{report.name}}</h5>
+                <p class="card-text">Count: <b>{{report.count}}</b></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">Storage
+                    <span class="badge badge-secondary badge-pill">{{report.storage}}</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Repair
+                    <span class="badge badge-danger badge-pill">{{report.repair}}</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Active
+                    <span class="badge badge-success badge-pill">{{report.active}}</span></li>
+            </ul>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

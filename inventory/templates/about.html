@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<! -- TITLE ------->
+<div class="px-3 py-3 pt -md-5 pb-md-4 mx-auto text-center">
+    <h2 class="display-4">About</h2>
+    <p class="lead"><b>inventorify</b> is an inventory manager web application developed by Shrish Mohapatra using
+        the Django framework.</p>
+</div>
+
+<! -- INFO CARDS ------->
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card mb-3 box-shadow shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title lead">Manage</h3>
+                <p class="card-text">Users can add or edit laptop entries, specifying important information such as
+                    office location, username, model, service tag, status, potential issues, and more.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="/index">View Laptops</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-3 box-shadow shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title lead">Reports</h3>
+                <p class="card-text">Users can view "report cards" for various office locations regarding laptop
+                    status. One can view a breakdown of stored, repaired, and active devices.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="/reports">View Reports</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-3 box-shadow shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title lead">Admin</h3>
+                <p class="card-text">Inventorify takes advantage of Django's admin backend. Admins can login to the'
+                    backend to view all database entries, create/edit account info, and more.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="/admin">Access Backend</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
