@@ -1,6 +1,8 @@
 # inventorify
 > **Inventorify** is an inventory manager web application developed by **Shrish Mohapatra** using the **Django** framework. The main objective of application is to allow users to **manage laptop inventory**, view **reports** for various offices, and to take advantage of Django's **administrative backend**.
 
+![alt text](https://github.com/theRealShrishM/inventorify/blob/master/img/inventorify_view_laptops.PNG "View Laptops")
+
 ## Running Project
 You will first need to clone the repository to your local machine:
 ```
