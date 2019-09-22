@@ -27,3 +27,26 @@ Windows: `python manage.py runserver`
 Linux/Mac: `python3 manage.py runserver`
 
 Go to your browser and type the following: **127.0.0.1:8000**
+
+## Main Features
+Key features of the web application include the ability to manage laptops, view reports, and use Django's admin backend.
+
+### Manage
+Users can add or edit laptop entries, specifying important information such as office location, username, model, service tag, status, potential issues, and more.
+
+![alt text](https://github.com/theRealShrishM/inventorify/blob/master/img/inventorify_edit_laptops.PNG "Edit Laptops")
+
+### Reports
+Users can view "report cards" for various office locations regarding laptop status. One can view a breakdown of stored, repaired, and active devices.
+
+![alt text](https://github.com/theRealShrishM/inventorify/blob/master/img/inventorify_reports.PNG "View Reports")
+
+### Admin
+Inventorify takes advantage of Django's admin backend. Admins can login to the' backend to view all database entries, create/edit account info, and more.
+
+![alt text](https://github.com/theRealShrishM/inventorify/blob/master/img/inventorify_admin.PNG "Admin")
+
+### About
+Inventorify includes a detailed **About** page which explains how to use the application.
+
+![alt text](https://github.com/theRealShrishM/inventorify/blob/master/img/inventorify_about.PNG "Admin")
